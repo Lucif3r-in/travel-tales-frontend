@@ -5,21 +5,30 @@ import {
   Grid,
   Paper,
   AppBar,
+  TextField,
   Button,
 } from "@material-ui/core";
-import TextField from "@mui/material/TextField";
 import { useDispatch } from "react-redux";
 import { getPostsBySearch } from "../../actions/posts";
 import Posts from "../Posts/Posts";
-import { useHistory } from "react-router-dom";
+import Form from "../Form/Form";
+import Pagination from "../Pagination/Paginate";
+import { useLocation, useHistory } from "react-router-dom";
 import useStyles from "./styles";
+import ChipInput from "material-ui-chip-input";
+
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
 
 const Hero = () => {
   const [currentId, setCurrentId] = useState(0);
   const dispatch = useDispatch();
   const styles = useStyles();
+  const query = useQuery();
   const history = useHistory();
-
+  const page = query.get("page") || 1;
+  const searchQuery = query.get("searchQuery");
   const [search, setSearch] = useState("");
   const [tags, setTags] = useState([]);
 
@@ -82,7 +91,13 @@ const Hero = () => {
             justifyContent="center"
             margin="auto"
           >
-            Posts Here
+            <Form currentId={currentId} setCurrentId={setCurrentId} />
+            <Posts setCurrentId={setCurrentId} />
+            {!searchQuery && !tags.length && (
+              <Paper elevation={6} className={styles.pagination}>
+                <Pagination page={page} />
+              </Paper>
+            )}
           </Grid>
         </Grid>
       </Container>
