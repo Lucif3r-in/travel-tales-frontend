@@ -9,13 +9,12 @@ import {
   Button,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { getPostsBySearch } from "../../actions/posts";
-import Posts from "../Posts/Posts";
+import { getPostsBySearch } from "../../middleware/posts";
+import PostMap from "../Posts/PostMap";
 import Form from "../Form/Form";
 import Pagination from "../Pagination/Paginate";
 import { useLocation, useHistory } from "react-router-dom";
 import useStyles from "./styles";
-import ChipInput from "material-ui-chip-input";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
@@ -92,7 +91,7 @@ const Hero = () => {
             margin="auto"
           >
             <Form currentId={currentId} setCurrentId={setCurrentId} />
-            <Posts setCurrentId={setCurrentId} />
+            <PostMap setCurrentId={setCurrentId} />
             {!searchQuery && !tags.length && (
               <Paper elevation={6} className={styles.pagination}>
                 <Pagination page={page} />
