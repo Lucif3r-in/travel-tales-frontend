@@ -18,7 +18,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 import moment from "moment";
 
-import { likePost, deletePost } from "../../../actions/posts";
+import { likePost, deletePost } from "../../../middleware/posts";
 import useStyles from "./styles";
 
 const Post = ({ post, setCurrentId }) => {
@@ -43,24 +43,30 @@ const Post = ({ post, setCurrentId }) => {
     if (post?.likes?.length > 0) {
       return likes.find((like) => like === userId) ? (
         <>
-          <AiFillHeart fontSize="small" />
+          <AiFillHeart fontSize="small" style={{ color: "white" }} />
           &nbsp;
-          {likes.length > 2
-            ? `You and ${likes.length - 1} others`
-            : `${likes.length} like${likes.length > 1 ? "s" : ""}`}
+          <span style={{ color: "white" }}>
+            {likes.length > 2
+              ? `You and ${likes.length - 1} others`
+              : `${likes.length} like${likes.length > 1 ? "s" : ""}`}
+          </span>
         </>
       ) : (
         <>
-          <AiOutlineHeart fontSize="small" />
-          &nbsp;{likes.length} {likes.length === 1 ? "Like" : "Likes"}
+          <AiOutlineHeart fontSize="small" style={{ color: "white" }} />
+          &nbsp;
+          <span style={{ color: "white" }}>
+            {likes.length} {likes.length === 1 ? "Like" : "Likes"}
+          </span>
         </>
       );
     }
 
     return (
       <>
-        <AiOutlineHeart fontSize="small" />
-        &nbsp;Like
+        <AiOutlineHeart fontSize="small" style={{ color: "white" }} />
+        &nbsp;
+        <span style={{ color: "white" }}>Like</span>
       </>
     );
   };
@@ -109,7 +115,7 @@ const Post = ({ post, setCurrentId }) => {
             key={tag}
             label={`${tag}`}
             color="primary"
-            variant="outlined"
+            variant="default"
             size="small"
             className={classes.tagChip}
           />

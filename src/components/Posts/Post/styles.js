@@ -73,4 +73,15 @@ export default makeStyles((theme) => ({
     display: "block",
     textAlign: "initial",
   },
+  truncatedMessage: {
+    color: "white",
+    display: "-webkit-box",
+    "-webkit-line-clamp": 3,
+    "-webkit-box-orient": "vertical",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    [theme.breakpoints.down("sm")]: {
+      "-webkit-line-clamp": 2,
+    },
+  },
 }));

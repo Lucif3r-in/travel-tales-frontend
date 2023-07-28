@@ -1,70 +1,49 @@
 import { makeStyles } from "@material-ui/core/styles";
-import { deepPurple } from "@material-ui/core/colors";
 
 export default makeStyles((theme) => ({
-  mainContainer: {
-    borderRadius: 15,
-    margin: "30px 0",
+  appBarSearch: {
+    borderRadius: 4,
+    marginBottom: "1rem",
     display: "flex",
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "10px 50px",
+    alignItems: "flex-end",
+    gap: "10px",
   },
-  heading: {
-    color: "rgba(0,183,255, 1)",
-    textDecoration: "none",
+  searchText: {
+    backgroundColor: "white",
+    borderRadius: 4,
+    width: "100%",
   },
-  image: {
-    marginLeft: "15px",
-  },
-  toolbar: {
-    display: "flex",
-    justifyContent: "flex-end",
-    width: "400px",
-  },
-  profile: {
-    display: "flex",
-    justifyContent: "space-between",
-    width: "400px",
-  },
-  userName: {
-    display: "flex",
-    alignItems: "center",
-  },
-  brandContainer: {
-    display: "flex",
-    alignItems: "center",
-    textDecoration: "none",
-  },
-  smMargin: {
-    margin: theme.spacing(1),
-  },
-  purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
-    backgroundColor: deepPurple[500],
-  },
-  [theme.breakpoints.down("sm")]: {
-    appBar: {
-      padding: "10px 20px",
-    },
-    heading: {
-      display: "none",
-    },
-    userName: {
-      display: "none",
-    },
-    image: {
-      marginLeft: "5px",
-    },
-    toolbar: {
-      display: "flex",
-      justifyContent: "flex-end",
-      width: "160px",
-    },
-  },
-
-  actionDiv: {
+  quoteText: {
+    color: "white",
     textAlign: "center",
+    marginBottom: theme.spacing(2),
+  },
+  mainContainer: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  pagination: {
+    margin: "auto",
+    width: "20%",
+    background: "#2c2c2c",
+    borderRadius: 4,
+    marginTop: "1rem",
+    padding: "16px",
+    color: "white",
+  },
+  gridContainer: {
+    [theme.breakpoints.down("xs")]: {
+      flexDirection: "column-reverse",
+    },
+  },
+  centerButton: {
+    display: "flex",
+    justifyContent: "center",
+    marginBottom: theme.spacing(2),
+  },
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 }));

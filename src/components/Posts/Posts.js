@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import Post from "./Post/Post";
 import useStyles from "./styles";
 
-const PostMap = ({ setCurrentId }) => {
+const Posts = ({ setCurrentId }) => {
   const { posts, isLoading } = useSelector((state) => state.posts);
   const classes = useStyles();
 
@@ -29,4 +29,4 @@ const PostMap = ({ setCurrentId }) => {
   );
 };
 
-export default PostMap;
+export default Posts;
