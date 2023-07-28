@@ -11,10 +11,10 @@ import {
   Typography,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
-import { getPostsBySearch } from "../../actions/posts";
+import { getPostsBySearch } from "../../middleware/posts";
 import Posts from "../Posts/Posts";
 import Form from "../Form/Form";
-import Pagination from "../Pagination/Paginate";
+import Paging from "../Paging/Paging";
 import { useLocation, useHistory } from "react-router-dom";
 import useStyles from "./styles";
 
@@ -150,7 +150,7 @@ const Hero = () => {
             <Posts setCurrentId={setCurrentId} />
             {!searchQuery && !tags.length && (
               <Paper elevation={6} className={styles.pagination}>
-                <Pagination page={page} />
+                <Paging page={page} />
               </Paper>
             )}
           </Grid>

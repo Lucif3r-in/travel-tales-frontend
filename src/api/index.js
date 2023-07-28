@@ -1,39 +1,35 @@
 import axios from "axios";
 
-const baseURL = "http://localhost:5000";
-
 const API = axios.create({
-  baseURL,
+  baseURL: "https://mysterious-boa-trunks.cyclic.app",
+  // baseURL: "http://localhost:5000",
 });
 
-API.interceptors.request.use((config) => {
-  const profile = JSON.parse(localStorage.getItem("profile"));
-  if (profile?.token) {
-    config.headers.Authorization = `Bearer ${profile.token}`;
+API.interceptors.request.use((req) => {
+  if (localStorage.getItem("profile")) {
+    req.headers.Authorization = `Bearer ${
+      JSON.parse(localStorage.getItem("profile")).token
+    }`;
   }
-  return config;
+
+  return req;
 });
 
-const postRoutes = "/posts";
-const userRoutes = "/users";
-
-// Posts related API functions
-export const fetchPostById = (id) => API.get(`${postRoutes}/${id}`);
-export const fetchPosts = (page) => API.get(`${postRoutes}?page=${page}`);
+export const fetchPostById = (id) => API.get(`/posts/${id}`);
+export const fetchPosts = (page) => API.get(`/posts?page=${page}`);
 export const fetchPostsBySearch = (searchQuery) =>
   API.get(
-    `${postRoutes}/search?searchQuery=${searchQuery.search || "none"}&tags=${
+    `/posts/search?searchQuery=${searchQuery.search || "none"}&tags=${
       searchQuery.tags
     }`
   );
-export const createPost = (newPost) => API.post(postRoutes, newPost);
-export const likePost = (id) => API.patch(`${postRoutes}/${id}/likePost`);
+export const createPost = (newPost) => API.post("/posts", newPost);
+export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
 export const commentPost = (comment, id) =>
-  API.post(`${postRoutes}/${id}/commentPost`, { comment });
+  API.post(`/posts/${id}/commentPost`, { comment });
 export const updatePost = (id, updatedPost) =>
-  API.patch(`${postRoutes}/${id}`, updatedPost);
-export const deletePost = (id) => API.delete(`${postRoutes}/${id}`);
+  API.patch(`/posts/${id}`, updatedPost);
+export const deletePost = (id) => API.delete(`/posts/${id}`);
 
-// User related API functions
-export const signIn = (formData) => API.post(`${userRoutes}/signin`, formData);
-export const signUp = (formData) => API.post(`${userRoutes}/signup`, formData);
+export const signIn = (formData) => API.post("/users/signin", formData);
+export const signUp = (formData) => API.post("/users/signup", formData);

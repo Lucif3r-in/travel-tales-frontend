@@ -2,7 +2,7 @@ import { Button, TextField, Typography } from "@material-ui/core";
 import React, { useRef, useState } from "react";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { commentPost } from "../../actions/posts";
+import { commentPost } from "../../middleware/posts";
 import useStyles from "./styles";
 
 const CommentSection = ({ post }) => {

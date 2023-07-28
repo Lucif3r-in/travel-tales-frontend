@@ -10,7 +10,7 @@ import moment from "moment";
 import { Link, useParams, useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import useStyles from "./styles";
-import { getPost, getPostsBySearch } from "../../actions/posts";
+import { getPost, getPostsBySearch } from "../../middleware/posts";
 import CommentSection from "./CommentSection";
 
 const PostDetails = () => {
@@ -19,7 +19,7 @@ const PostDetails = () => {
   const dispatch = useDispatch();
 
   const { id } = useParams();
-  const { posts, post, isLoading } = useSelector((state) => state.posts);
+  const { post, isLoading } = useSelector((state) => state.posts);
 
   useEffect(() => {
     dispatch(getPost(id));
@@ -38,22 +38,19 @@ const PostDetails = () => {
   if (isLoading) {
     return (
       <Paper elevation={6} className={classes.loadingPaper}>
-        <CircularProgress size="7em" />
+        <CircularProgress size="5em" />
       </Paper>
     );
   }
-
-  const openPost = (_id) => history.push(`/posts/${_id}`);
-
-  const recommendedPosts = posts.filter(({ _id }) => _id !== post._id);
 
   return (
     <Paper
       style={{
         borderRadius: "20px",
-        width: "90%",
+        width: "80%",
         margin: "auto",
         padding: "20px",
+        marginBottom: "20px",
       }}
       elevation={6}
     >
@@ -84,14 +81,12 @@ const PostDetails = () => {
           <Typography gutterBottom variant="body1" component="p">
             {post.message}
           </Typography>
-          <Typography variant="h6">
+          <Typography
+            variant="h6"
+            style={{ color: "#2c2c2c", fontWeight: "bolder" }}
+          >
             Created by:
-            <Link
-              to={`/creators/${post.name}`}
-              style={{ textDecoration: "none", color: "#3f51b5" }}
-            >
-              {` ${post.name}`}
-            </Link>
+            {` ${post.name}`}
           </Typography>
           <Typography variant="body1">
             {moment(post.createdAt).fromNow()}

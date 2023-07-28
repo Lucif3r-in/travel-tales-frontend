@@ -4,7 +4,7 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 
-import * as actionType from "../../actiontypes/actionTypes";
+import * as actionType from "../../actionTypes/actionTypes";
 import useStyles from "./styles";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
       <AppBar className={classes.appBar} position="static">
         <Link to="/" className={classes.brandContainer}>
           <Typography variant="h4" className={classes.title}>
-            Travel Talks
+            Travel Tales
           </Typography>
         </Link>
         <Toolbar className={classes.toolbar}>
