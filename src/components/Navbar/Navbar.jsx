@@ -4,7 +4,7 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
 
-import * as actionType from "../../actionTypes/actionTypes";
+import * as actionType from "../../actions/actionTypes";
 import useStyles from "./styles";
 
 const Navbar = () => {

@@ -9,7 +9,7 @@ import {
   END_LOADING,
   FETCH_POST,
   COMMENTS,
-} from "../actionTypes/actionTypes";
+} from "../actions/actionTypes";
 import * as api from "../api/index.js";
 
 export const getPost = (id) => async (dispatch) => {

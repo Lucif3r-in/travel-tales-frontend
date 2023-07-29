@@ -1,4 +1,4 @@
-import { AUTH } from "../actionTypes/actionTypes";
+import { AUTH } from "../actions/actionTypes";
 import * as api from "../api/index.js";
 
 export const signin = (formData, router) => async (dispatch) => {

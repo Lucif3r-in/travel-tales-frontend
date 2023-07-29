@@ -10,7 +10,7 @@ import {
   END_LOADING,
   FETCH_POST,
   COMMENTS,
-} from "../actionTypes/actionTypes";
+} from "../actions/actionTypes";
 
 export default (state = { isLoading: true, posts: [] }, action) => {
   switch (action.type) {

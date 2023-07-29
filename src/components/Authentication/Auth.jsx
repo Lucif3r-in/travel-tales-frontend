@@ -15,7 +15,7 @@ import { loadGapiInsideDOM } from "gapi-script";
 
 import Icon from "./icon";
 import { signin, signup } from "../../middleware/auth";
-import { AUTH } from "../../actionTypes/actionTypes";
+import { AUTH } from "../../actions/actionTypes";
 import useStyles from "./styles";
 import Input from "./Input";
 
