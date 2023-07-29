@@ -2,7 +2,6 @@ import axios from "axios";
 
 const API = axios.create({
   baseURL: "https://cooperative-mite-bracelet.cyclic.app",
-  // baseURL: "http://localhost:5000",
 });
 
 API.interceptors.request.use((req) => {
