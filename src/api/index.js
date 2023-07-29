@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://mysterious-boa-trunks.cyclic.app",
+  baseURL: "https://cooperative-mite-bracelet.cyclic.app",
   // baseURL: "http://localhost:5000",
 });
 
