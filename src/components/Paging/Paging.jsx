@@ -16,6 +16,7 @@ const Paging = ({ page }) => {
 
   return (
     <Pagination
+      style={{ width: "auto" }}
       classes={{ ul: classes.ul }}
       count={numberOfPages}
       page={Number(page) || 1}
@@ -26,6 +27,7 @@ const Paging = ({ page }) => {
           {...item}
           component={Link}
           to={`/posts?page=${item.page}`}
+          className={classes.paginationItem}
         />
       )}
     />

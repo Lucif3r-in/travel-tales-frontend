@@ -134,7 +134,14 @@ const Post = ({ post, setCurrentId }) => {
           variant="body2"
           color="textSecondary"
           component="p"
-          style={{ color: "white" }}
+          style={{
+            color: "white",
+            display: "-webkit-box",
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: "vertical",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+          }}
         >
           {post.message}
         </Typography>

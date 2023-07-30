@@ -17,7 +17,7 @@ const App = () => {
       <Container
         maxWidth="xl"
         style={{
-          backgroundColor: "black",
+          // backgroundColor: "black",
           height: "100vh",
           padding: "0px",
           margin: "0px",

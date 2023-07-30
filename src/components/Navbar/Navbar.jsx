@@ -3,6 +3,7 @@ import { AppBar, Typography, Toolbar, Avatar, Button } from "@material-ui/core";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import decode from "jwt-decode";
+// import Logo from "../../public/Logo.png";
 
 import * as actionType from "../../actions/actionTypes";
 import useStyles from "./styles";
@@ -38,7 +39,13 @@ const Navbar = () => {
     <>
       <AppBar className={classes.appBar} position="static">
         <Link to="/" className={classes.brandContainer}>
-          <Typography variant="h4" className={classes.title}>
+          <img
+            src="https://res.cloudinary.com/dhnkuonev/image/upload/v1690723588/Logo_tor6pg.png"
+            alt="Travel Tales Logo"
+            className={classes.logo}
+            height={40}
+          />
+          <Typography variant="h5" className={classes.title}>
             Travel Tales
           </Typography>
         </Link>

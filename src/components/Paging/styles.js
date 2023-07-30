@@ -1,10 +1,15 @@
 import { makeStyles } from "@material-ui/core";
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   ul: {
-    margin: "auto",
-    width: "100%",
-    justifyContent: "space-around",
-    color: "white",
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("sm")]: {
+      width: "auto",
+    },
+    paginationItem: {
+      color: theme.palette.primary.main,
+    },
   },
 }));

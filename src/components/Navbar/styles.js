@@ -3,17 +3,17 @@ import { deepPurple } from "@material-ui/core/colors";
 
 export default makeStyles((theme) => ({
   appBar: {
-    position: "relative", // Add position relative for the shadow pseudo-element
+    position: "relative",
     margin: "0 0 30px 0",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "rgba(31, 31, 31, 0.75)", // Use rgba for the transparency
-    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)", // Box shadow for the glassmorphism effect
-    backdropFilter: "blur(7.5px)", // This creates the glassmorphism effect
-    "-webkit-backdrop-filter": "blur(7.5px)", // Add vendor-prefixed version for compatibility
-    border: "1px solid rgba(31, 31, 31, 1)", // Border style
+    background: "transparent",
+    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+    backdropFilter: "blur(2.5px)",
+    "-webkit-backdrop-filter": "blur(2.5px)",
+    // border: "1px solid rgba(31, 31, 31, 1)",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -26,7 +26,7 @@ export default makeStyles((theme) => ({
     transform: "translateX(-50%)",
     width: "80%",
     height: "10px",
-    backgroundColor: "rgba(255, 255, 255, 0.2)", // Whitish shadow color with transparency
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
     borderRadius: "50%",
     zIndex: -1,
   },
@@ -38,8 +38,10 @@ export default makeStyles((theme) => ({
   },
   title: {
     fontFamily: "'Lobster', cursive",
-    color: "#3f51b5",
+    color: "#fff",
     padding: "0 20px",
+    display: "flex",
+    flexDirection: "column",
   },
   toolbar: {
     display: "flex",

@@ -3,10 +3,11 @@ import { makeStyles } from "@material-ui/core/styles";
 export default makeStyles((theme) => ({
   media: {
     height: 0,
-    paddingTop: "76.25%",
+    paddingTop: "60%",
   },
   tagChip: {
     margin: theme.spacing(0.5),
+    overflowX: "auto",
   },
   fullHeightCard: {
     height: "100%",
@@ -22,8 +23,7 @@ export default makeStyles((theme) => ({
     "&:hover $overlay": {
       opacity: 1,
     },
-    boxShadow:
-      "-15px -15px 15px #fff1, inset -15px -15px 15px #fff1, 15px 15px 15px #0004, inset 15px 15px 15px #0004",
+    boxShadow: "-15px -15px 15px #fff1, ",
 
     background: "#2c2c2c",
     color: "white",
@@ -55,7 +55,7 @@ export default makeStyles((theme) => ({
   details: {
     display: "flex",
     justifyContent: "flex-start",
-    margin: "20px",
+    margin: "20px 0 20x 0",
     padding: "8px",
     borderRadius: "15px",
     color: "white",

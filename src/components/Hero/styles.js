@@ -24,8 +24,8 @@ export default makeStyles((theme) => ({
   },
   pagination: {
     margin: "auto",
-    width: "20%",
-    background: "#2c2c2c",
+    width: "max-content",
+    background: "#fff",
     borderRadius: 4,
     marginTop: "1rem",
     padding: "16px",
