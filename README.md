@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+![Logo](https://res.cloudinary.com/dhnkuonev/image/upload/v1690817781/Frame_1_r2cwtq.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Travel Tales
 
-## Available Scripts
+"[Travel Tales](https://traveltaless.vercel.app)" website, offering an engaging user experience in form of travel stories. At its core, the component renders visually appealing cards that showcase captivating travel posts. Each post includes a title, image, traveler's name, creation date, and tags.
 
-In the project directory, you can run:
+## Screenshots
 
-### `npm start`
+![App Screenshot](https://res.cloudinary.com/dhnkuonev/image/upload/v1690807256/Screenshot_2023-07-31_180915_umsw5s.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Run Locally
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the project
 
-### `npm test`
+```bash
+  git clone https://github.com/Lucif3r-in/travel-tales-frontend
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go to the project directory
 
-### `npm run build`
+```bash
+  cd travel-tales-frontend
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install dependencies
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+  yarn
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Start the server
 
-### `npm run eject`
+```bash
+  yarn start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## File Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary>Click to view file structure</summary>
+  <pre>
+    <code>
+📦src
+ ┣ 📂actions
+ ┃ ┗ 📜actionTypes.js
+ ┣ 📂api
+ ┃ ┗ 📜index.js
+ ┣ 📂components
+ ┃ ┣ 📂Authentication
+ ┃ ┃ ┣ 📜Auth.jsx
+ ┃ ┃ ┣ 📜icon.js
+ ┃ ┃ ┣ 📜Input.jsx
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📂Form
+ ┃ ┃ ┣ 📜Form.js
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📂Hero
+ ┃ ┃ ┣ 📜Hero.jsx
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📂Navbar
+ ┃ ┃ ┣ 📜Navbar.jsx
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📂Paging
+ ┃ ┃ ┣ 📜Paging.jsx
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┣ 📂PostDetails
+ ┃ ┃ ┣ 📜CommentSection.jsx
+ ┃ ┃ ┣ 📜PostDetails.jsx
+ ┃ ┃ ┗ 📜styles.js
+ ┃ ┗ 📂Posts
+ ┃ ┃ ┣ 📂Post
+ ┃ ┃ ┃ ┣ 📜Post.js
+ ┃ ┃ ┃ ┗ 📜styles.js
+ ┃ ┃ ┣ 📜Posts.js
+ ┃ ┃ ┗ 📜styles.js
+ ┣ 📂middleware
+ ┃ ┣ 📜auth.js
+ ┃ ┗ 📜posts.js
+ ┣ 📂reducers
+ ┃ ┣ 📜auth.js
+ ┃ ┣ 📜index.js
+ ┃ ┗ 📜posts.js
+ ┣ 📜App.css
+ ┣ 📜App.js
+ ┣ 📜App.test.js
+ ┣ 📜index.css
+ ┣ 📜index.js
+ ┣ 📜logo.svg
+ ┣ 📜reportWebVitals.js
+ ┣ 📜setupTests.js
+ ┗ 📜styles.js
+    </code>
+  </pre>
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Authors
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- [@Lucif3r-in](https://github.com/Lucif3r-in)
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Contributions are always welcome!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+NOTE 1: Please abide by the [Contributing Guidelines](https://github.com/Lucif3r-in/travel-tales-frontend/blob/main/CONTRIBUTING.md).
 
-### Code Splitting
+NOTE 2: Please abide by the [Code of Conduct](https://github.com/Lucif3r-in/travel-tales-frontend/blob/main/CODE_OF_CONDUCT.md).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+NOTE 3: We follow the following [coventional commit types](https://github.com/pvdlg/conventional-commit-types)
