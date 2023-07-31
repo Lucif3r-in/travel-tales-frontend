@@ -2,7 +2,7 @@
 
 # Travel Tales
 
-"[Travel Tales](https://traveltaless.vercel.app)" website, offering an engaging user experience in form of travel stories. At its core, the component renders visually appealing cards that showcase captivating travel posts. Each post includes a title, image, traveler's name, creation date, and tags.
+"[Travel Tales](https://traveltaless.vercel.app)" website, offering an engaging user experience in form of travel stories. At its core, the component renders visually appealing cards that showcase captivating travel posts. Each post includes a title, image, traveler's name, creation date, and tags. Backend part of the project can be found [here](https://github.com/Lucif3r-in/travel-tales-backend)
 
 ## Screenshots
 
