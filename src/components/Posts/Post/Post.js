@@ -129,7 +129,7 @@ const Post = ({ post, setCurrentId }) => {
       >
         {post.title}
       </Typography>
-      <CardContent>
+      <CardContent className={classes.cardContnet}>
         <Typography
           variant="body2"
           color="textSecondary"

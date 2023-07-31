@@ -49,6 +49,9 @@ export default makeStyles((theme) => ({
     right: "20px",
     color: "white",
   },
+  cardContent: {
+    padding: 0,
+  },
   grid: {
     display: "flex",
   },
@@ -65,7 +68,7 @@ export default makeStyles((theme) => ({
     color: "white",
   },
   cardActions: {
-    padding: "0 16px 8px 16px",
+    padding: "0 16px 8px 2px",
     display: "flex",
     justifyContent: "space-between",
   },

@@ -42,6 +42,18 @@ export default makeStyles((theme) => ({
     padding: "0 20px",
     display: "flex",
     flexDirection: "column",
+    alignItems: "left",
+    justifyContent: "center",
+  },
+
+  travelText: {
+    fontSize: "1.2rem",
+    fontWeight: "bold",
+    color: "white",
+  },
+  talesText: {
+    fontSize: "1.0rem",
+    color: "white",
   },
   toolbar: {
     display: "flex",

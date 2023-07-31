@@ -46,7 +46,8 @@ const Navbar = () => {
             height={40}
           />
           <Typography variant="h5" className={classes.title}>
-            Travel Tales
+            <span className={classes.travelText}>Travel</span>
+            <span className={classes.talesText}>Tales</span>
           </Typography>
         </Link>
         <Toolbar className={classes.toolbar}>

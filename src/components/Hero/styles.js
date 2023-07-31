@@ -28,7 +28,7 @@ export default makeStyles((theme) => ({
     background: "#fff",
     borderRadius: 4,
     marginTop: "1rem",
-    padding: "16px",
+    padding: "8px",
     color: "white",
   },
   gridContainer: {
