@@ -2,7 +2,6 @@ import * as React from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
 import Link from "@mui/material/Link";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import EmailIcon from "@mui/icons-material/Email";
@@ -24,7 +23,7 @@ export default function StickyFooter() {
           backgroundColor: "transparent",
           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(2.5px)",
-          "-webkit-backdrop-filter": "blur(2.5px)",
+          WebkitBackdropFilter: "blur(2.5px)",
           position: "fixed",
           left: 0,
           bottom: 0,
@@ -33,7 +32,7 @@ export default function StickyFooter() {
           justifyContent: "space-around",
           alignItems: "center",
           color: "white",
-          margin: "0 auto", // Center the container horizontally
+          margin: "0 auto",
         }}
       >
         <Link to="/" className={classes.brandContainer}>

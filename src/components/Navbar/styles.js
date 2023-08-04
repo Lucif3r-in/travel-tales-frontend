@@ -12,7 +12,7 @@ export default makeStyles((theme) => ({
     background: "transparent",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(2.5px)",
-    "-webkit-backdrop-filter": "blur(2.5px)",
+    WebkitBackdropFilter: "blur(2.5px)",
     // border: "1px solid rgba(31, 31, 31, 1)",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
