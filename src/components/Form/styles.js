@@ -24,4 +24,13 @@ export default makeStyles((theme) => ({
   buttonSubmit: {
     marginBottom: 10,
   },
+  loadingContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    margin: "10px 0",
+  },
+  loadingSpinner: {
+    color: theme.palette.primary.main,
+  },
 }));

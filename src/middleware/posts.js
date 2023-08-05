@@ -51,7 +51,7 @@ export const getPostsBySearch = (searchQuery) => async (dispatch) => {
 export const createPost = (post, history) => async (dispatch) => {
   try {
     const { data } = await api.createPost(post);
-    history.push("/");
+    history.push("/posts");
     dispatch({ type: CREATE, payload: data });
   } catch (error) {
     console.log(error);
@@ -93,7 +93,7 @@ export const commentPost = (comment, id) => async (dispatch) => {
 export const deletePost = (id, history) => async (dispatch) => {
   try {
     await await api.deletePost(id);
-    history.push("/");
+    history.push("/posts");
     dispatch({ type: DELETE, payload: id });
   } catch (error) {
     console.log(error);

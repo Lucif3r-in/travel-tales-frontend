@@ -4,7 +4,7 @@ const useStyles = makeStyles((theme) => ({
   homeContainer: {
     position: "relative",
     display: "flex",
-    top: "10%",
+    // top: "10%",
     maxWidth: "75%",
   },
   textContainer: {

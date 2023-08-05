@@ -3,8 +3,9 @@ import { deepPurple } from "@material-ui/core/colors";
 
 export default makeStyles((theme) => ({
   appBar: {
+    width: "90%",
     position: "relative",
-    margin: "0 0 30px 0",
+    margin: "auto",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -13,7 +14,6 @@ export default makeStyles((theme) => ({
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(2.5px)",
     WebkitBackdropFilter: "blur(2.5px)",
-    // border: "1px solid rgba(31, 31, 31, 1)",
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
     },
@@ -66,6 +66,7 @@ export default makeStyles((theme) => ({
   profile: {
     display: "flex",
     justifyContent: "flex-end",
+    gap: "20px",
     width: "400px",
     alignItems: "center",
     [theme.breakpoints.down("sm")]: {

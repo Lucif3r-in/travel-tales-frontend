@@ -24,15 +24,12 @@ export default function StickyFooter() {
           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
           backdropFilter: "blur(2.5px)",
           WebkitBackdropFilter: "blur(2.5px)",
-          position: "fixed",
-          left: 0,
-          bottom: 0,
-          width: "100vw",
+          margin: "auto",
+          // width: "100vw",
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",
           color: "white",
-          margin: "0 auto",
         }}
       >
         <Link to="/" className={classes.brandContainer}>

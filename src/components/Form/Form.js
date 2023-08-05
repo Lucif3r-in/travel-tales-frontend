@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Typography, Paper, Link } from "@material-ui/core";
+import {
+  TextField,
+  Button,
+  Typography,
+  Paper,
+  Link,
+  CircularProgress,
+} from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import FileBase from "react-file-base64";
 import { createPost, updatePost } from "../../middleware/posts";
@@ -23,6 +30,9 @@ const Form = ({ currentId, setCurrentId }) => {
   const classes = useStyles();
   const user = JSON.parse(localStorage.getItem("profile"));
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
     if (post) setPostData(post);
   }, [post]);
@@ -34,15 +44,27 @@ const Form = ({ currentId, setCurrentId }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setError(null);
 
-    if (currentId === 0) {
-      dispatch(createPost({ ...postData, name: user?.result?.name }, history));
-      clear();
-    } else {
-      dispatch(
-        updatePost(currentId, { ...postData, name: user?.result?.name })
-      );
-      clear();
+    try {
+      if (currentId === 0) {
+        await dispatch(createPost({ ...postData, name: user?.result?.name }));
+        clear();
+      } else {
+        await dispatch(
+          updatePost(currentId, { ...postData, name: user?.result?.name })
+        );
+        clear();
+      }
+      setTimeout(() => {
+        window.location.reload();
+      }, 10000);
+
+      history.push("/posts");
+    } catch (err) {
+      setError(err.message);
+      setIsSubmitting(false);
     }
   };
 
@@ -66,6 +88,12 @@ const Form = ({ currentId, setCurrentId }) => {
         className={`${classes.root} ${classes.form}`}
         onSubmit={handleSubmit}
       >
+        {error && (
+          // Display the error message if there is an error during form submission
+          <Typography color="error" variant="subtitle1">
+            Error: {error}
+          </Typography>
+        )}
         <Typography variant="h6">
           {currentId ? `Editing "${post.title}"` : "Creating a tale"}
         </Typography>
@@ -116,7 +144,7 @@ const Form = ({ currentId, setCurrentId }) => {
           type="submit"
           fullWidth
         >
-          Submit
+          {isSubmitting ? <CircularProgress size={24} /> : "Submit"}
         </Button>
         <Button
           variant="contained"

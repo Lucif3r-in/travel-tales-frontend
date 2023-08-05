@@ -61,10 +61,10 @@ const Hero = () => {
           `/posts/search?searchQuery=${search || "none"}&tags=${tags.join(",")}`
         );
       } else {
-        history.push("/");
+        history.push("/posts");
       }
     } else {
-      history.push("/");
+      history.push("/posts");
     }
   };
 
