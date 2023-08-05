@@ -30,6 +30,8 @@ export default function StickyFooter() {
           justifyContent: "space-around",
           alignItems: "center",
           color: "white",
+          position: "relative",
+          bottom: "0",
         }}
       >
         <Link to="/" className={classes.brandContainer}>

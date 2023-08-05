@@ -22,7 +22,7 @@ const App = () => {
           margin: "auto",
           display: "flex",
           flexDirection: "column",
-          minHeight: "100vh",
+          // minHeight: "100vh",
           width: "90%",
           marginTop: "2rem",
         }}
