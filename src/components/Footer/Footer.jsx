@@ -25,7 +25,6 @@ export default function StickyFooter() {
           backdropFilter: "blur(2.5px)",
           WebkitBackdropFilter: "blur(2.5px)",
           margin: "auto",
-          // width: "100vw",
           display: "flex",
           justifyContent: "space-around",
           alignItems: "center",

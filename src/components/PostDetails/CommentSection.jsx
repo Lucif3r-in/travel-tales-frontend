@@ -1,6 +1,5 @@
 import { Button, TextField, Typography } from "@material-ui/core";
 import React, { useRef, useState } from "react";
-import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { commentPost } from "../../middleware/posts";
 import useStyles from "./styles";
@@ -52,7 +51,7 @@ const CommentSection = ({ post }) => {
         <Button
           style={{ marginTop: "10px" }}
           fullWidth
-          disabled={!comment.length}
+          disabled={!comment.length || !user?.result?.name}
           color="primary"
           variant="contained"
           onClick={handleComment}
