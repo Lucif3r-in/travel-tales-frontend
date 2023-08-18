@@ -87,4 +87,7 @@ export default makeStyles((theme) => ({
       "-webkit-line-clamp": 2,
     },
   },
+  disabledButton: {
+    cursor: "not-allowed",
+  },
 }));

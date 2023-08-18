@@ -152,6 +152,7 @@ const Post = ({ post, setCurrentId }) => {
           color="inherit"
           disabled={!user?.result}
           onClick={handleLike}
+          style={{ cursor: user?.result ? "pointer" : "not-allowed" }}
         >
           <Likes />
         </Button>
