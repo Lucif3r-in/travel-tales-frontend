@@ -44,7 +44,7 @@ export default function StickyFooter() {
         <Typography variant="body1">Made with :love: by vasudev🪶</Typography>
         <Box>
           <Link
-            href="https://github.com/Lucif3r-in"
+            href="https://github.com/ashutosh-rath02"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -58,7 +58,7 @@ export default function StickyFooter() {
             <EmailIcon sx={{ color: "white", marginRight: 2 }} />
           </Link>
           <Link
-            href="https://twitter.com/Ashutos48101482"
+            href="https://twitter.com/v_ashu_dev"
             target="_blank"
             rel="noopener noreferrer"
           >
